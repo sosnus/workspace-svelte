@@ -72,7 +72,7 @@ sprawdzać typowanie? - jak ominąć stringi?
 </p>
 <table>
   <tr style="background-color:#dc3545">
-    <td>ERROR</td>
+    <td>ALERT</td>
     <td><input value="∞" class="lock"  readonly/><br><input type="number" bind:value={maxError} on:change={recalc} on:keypress={recalc} on:change={recalc} /></td>
   </tr>
   <tr style="background-color:#ffc107">
@@ -92,7 +92,7 @@ sprawdzać typowanie? - jak ominąć stringi?
     <td><input type="number" bind:value={minWarning} on:change={recalc} on:keypress={recalc} on:change={recalc} /><br><input type="number" bind:value={virtualMinWarning}  class="lock"/></td>
   </tr>
   <tr style="background-color:#dc3545">
-    <td>ERROR</td>
+    <td>ALERT</td>
     <td><input type="number" bind:value={minError}  on:change={recalc} on:keypress={recalc} on:change={recalc}/><br>
       <input value="-∞" class="lock" readonly/></td>
   </tr>
