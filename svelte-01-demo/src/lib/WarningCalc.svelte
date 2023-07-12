@@ -52,8 +52,11 @@ dc3545 - ERROR
 <!-- 
   TODO:
 Wersja wielojęzykowa
-Ukrycie warnga (opcjonalnie)
+Ukrycie warna (opcjonalnie)
 dodanie nazwy zmiennej na którą algorytm ma reagować (np @temperature)
+walidacja
+kropka-przecinek
+zmiana error, warning na alert,warning
 -->
 <h3>Kreator zakresów ostrzeżeń</h3>
 <p>
