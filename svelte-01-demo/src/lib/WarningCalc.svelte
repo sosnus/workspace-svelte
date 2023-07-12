@@ -17,6 +17,7 @@
     virtualMaxOk = maxWarning - 0.001;
     virtualMinOk = minWarning + 0.001;
     virtualMinWarning = minError + 0.001;
+    console.log(virtualMinWarning)
     command = "<" + minError + ">" + maxError + ":" + "<" + minWarning + ">" + maxWarning;
 
     // console.log("Change!");
@@ -56,9 +57,10 @@ Ukrycie warna (opcjonalnie)
 dodanie nazwy zmiennej na którą algorytm ma reagować (np @temperature)
 walidacja
 kropka-przecinek
+co gdy user wpisze "," albo stringa?
 zmiana error, warning na alert,warning
 dodać tester!
-sprawdzać typowanie?
+sprawdzać typowanie? - jak ominąć stringi?
 -->
 <h3>Kreator zakresów ostrzeżeń</h3>
 <p>
@@ -70,11 +72,11 @@ sprawdzać typowanie?
 <table>
   <tr style="background-color:#dc3545">
     <td>ERROR</td>
-    <td><input value="∞" class="lock"  readonly/><br><input bind:value={maxError} /></td>
+    <td><input value="∞" class="lock"  readonly/><br><input bind:value={maxError} on:change={recalc} on:keypress={recalc} on:change={recalc} /></td>
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>
-    <td><input bind:value={virtualMaxWarning} class="lock"/><br><input  on:change={recalc}  bind:value={maxWarning} /></td>
+    <td><input bind:value={virtualMaxWarning} class="lock"/><br><input  on:change={recalc} on:keypress={recalc} on:change={recalc} bind:value={maxWarning} /></td>
   </tr>
   <tr style="background-color:#007bff">
     <td>OK</td>
@@ -86,11 +88,11 @@ sprawdzać typowanie?
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>
-    <td><input bind:value={minWarning} /><br><input bind:value={virtualMinWarning}  class="lock"/></td>
+    <td><input bind:value={minWarning} on:change={recalc} on:keypress={recalc} on:change={recalc} /><br><input bind:value={virtualMinWarning}  class="lock"/></td>
   </tr>
   <tr style="background-color:#dc3545">
     <td>ERROR</td>
-    <td><input bind:value={minError} /><br>
+    <td><input bind:value={minError}  on:change={recalc} on:keypress={recalc} on:change={recalc}/><br>
       <input value="-∞" class="lock" readonly/></td>
   </tr>
 </table>
