@@ -1,9 +1,11 @@
 <script lang="ts">
   let maxError: number = 40
+  let virtualMaxWarning: number = 888
   let maxWarning: number = 30
-  let virtualMaxOk : number = 0
-  let virtualMinOk : number = 0
+  let virtualMaxOk : number = 888
+  let virtualMinOk : number = 888
   let minWarning: number = 0
+  let virtualMinWarning: number = 888
   let minError: number = -10
   const increment = () => {
     // count += 1
@@ -32,7 +34,7 @@ color: gray;
   </tr>
   <tr>
     <td>WARNING</td>
-    <td><input bind:value={maxWarning} /></td>
+    <td><input bind:value={virtualMaxWarning}  class="lock"/><br><input bind:value={maxWarning} /></td>
   </tr>
   <tr>
     <td>OK</td>
@@ -46,7 +48,7 @@ color: gray;
   </tr>
   <tr>
     <td>WARNING</td>
-    <td><input bind:value={minWarning} /></td>
+    <td><input bind:value={minWarning} /><br><input bind:value={virtualMinWarning}  class="lock"/></td>
   </tr>
   <tr>
     <td>ERROR</td>
