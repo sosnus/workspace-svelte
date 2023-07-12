@@ -57,6 +57,8 @@ dodanie nazwy zmiennej na którą algorytm ma reagować (np @temperature)
 walidacja
 kropka-przecinek
 zmiana error, warning na alert,warning
+dodać tester!
+sprawdzać typowanie?
 -->
 <h3>Kreator zakresów ostrzeżeń</h3>
 <p>
