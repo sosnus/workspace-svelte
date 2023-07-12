@@ -68,8 +68,6 @@ dc3545 - ERROR
       <br>
       <input bind:value={virtualMinOk} class="lock"  />
     </td>
-
-    <!-- <td><input bind:value={minError} /></td> -->
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>

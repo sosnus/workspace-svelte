@@ -7,10 +7,8 @@
 
 <main>
 
-  <h1>Vite + Svelte</h1>
 <textbox></textbox>
   <div class="card">
-    <Counter />
     <WarningCalc />
   </div>
 
