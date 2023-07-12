@@ -8,9 +8,9 @@
   let virtualMinWarning: number = 888
   let minError: number = -10
   let command : string = "to be calc"
-  const increment = () => {
-    // count += 1
-  }
+  let info : string = "<-10>40:<0>30"
+
+  
   const recalc = () => {
     // count += 1
     virtualMaxWarning = maxError - 0.001;
@@ -28,10 +28,6 @@
   .lock {
 color: gray;
 /* font-weight: bold; */
-  /* padding-left: 25px; */
-  /* background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left; */
-  /* background-size: 20px; */
-
 }
 </style>
 
@@ -53,16 +49,13 @@ dc3545 - ERROR
 }
 -->
 
-<!-- <button on:click={increment}>
-  count is {minError}
-</button> -->
 <p>
-  Zakresy ostrzeżeń w formacie alertCondition[:warningConditon] (np. [-10]40:[0]30 )
+  Zakresy ostrzeżeń w formacie alertCondition[:warningConditon] (np. <b>{info}</b> )
 </p>
 <table>
   <tr style="background-color:#dc3545">
     <td>ERROR</td>
-    <td><input value="-∞" class="lock"  readonly/><br><input bind:value={maxError} /></td>
+    <td><input value="∞" class="lock"  readonly/><br><input bind:value={maxError} /></td>
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>
@@ -85,7 +78,7 @@ dc3545 - ERROR
   <tr style="background-color:#dc3545">
     <td>ERROR</td>
     <td><input bind:value={minError} /><br>
-      <input value="∞" class="lock" readonly/></td>
+      <input value="-∞" class="lock" readonly/></td>
   </tr>
 </table>
 COMMAND: <br>
