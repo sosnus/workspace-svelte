@@ -18,8 +18,27 @@ color: gray;
   /* padding-left: 25px; */
   /* background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left; */
   /* background-size: 20px; */
+
 }
 </style>
+
+<!--
+007bff - OK
+ffc107 - WARNIG
+dc3545 - ERROR
+-->
+
+<!-- 
+  :root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+}
+-->
 
 <!-- <button on:click={increment}>
   count is {minError}
@@ -28,15 +47,15 @@ color: gray;
   Zakresy ostrzeżeń w formacie alertCondition[:warningConditon] (np. [-10]40:[0]30 )
 </p>
 <table>
-  <tr>
+  <tr style="background-color:#dc3545">
     <td>ERROR</td>
     <td><input value="-∞" class="lock"  readonly/><br><input bind:value={maxError} /></td>
   </tr>
-  <tr>
+  <tr style="background-color:#ffc107">
     <td>WARNING</td>
     <td><input bind:value={virtualMaxWarning}  class="lock"/><br><input bind:value={maxWarning} /></td>
   </tr>
-  <tr>
+  <tr style="background-color:#007bff">
     <td>OK</td>
     <td>
       <input bind:value={virtualMaxOk} class="lock"  />
@@ -46,11 +65,11 @@ color: gray;
 
     <!-- <td><input bind:value={minError} /></td> -->
   </tr>
-  <tr>
+  <tr style="background-color:#ffc107">
     <td>WARNING</td>
     <td><input bind:value={minWarning} /><br><input bind:value={virtualMinWarning}  class="lock"/></td>
   </tr>
-  <tr>
+  <tr style="background-color:#dc3545">
     <td>ERROR</td>
     <td><input bind:value={minError} /><br>
       <input value="∞" class="lock" readonly/></td>
