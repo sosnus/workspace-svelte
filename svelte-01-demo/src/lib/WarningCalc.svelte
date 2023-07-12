@@ -17,6 +17,8 @@
     virtualMaxOk = maxWarning - 0.001;
     virtualMinOk = minWarning + 0.001;
     virtualMinWarning = minError + 0.001;
+    command = "<" + minError + ">" + maxError + ":" + "<" + minWarning + ">" + maxWarning;
+
     console.log("Change!");
   }
   recalc(); // first run
@@ -25,6 +27,7 @@
 <style>
   .lock {
 color: gray;
+/* font-weight: bold; */
   /* padding-left: 25px; */
   /* background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left; */
   /* background-size: 20px; */
@@ -85,3 +88,5 @@ dc3545 - ERROR
       <input value="∞" class="lock" readonly/></td>
   </tr>
 </table>
+COMMAND: <br>
+<input bind:value={command} class="lock"  />
