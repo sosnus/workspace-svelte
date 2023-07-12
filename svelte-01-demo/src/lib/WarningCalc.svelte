@@ -7,9 +7,19 @@
   let minWarning: number = 0
   let virtualMinWarning: number = 888
   let minError: number = -10
+  let command : string = "to be calc"
   const increment = () => {
     // count += 1
   }
+  const recalc = () => {
+    // count += 1
+    virtualMaxWarning = maxError - 0.001;
+    virtualMaxOk = maxWarning - 0.001;
+    virtualMinOk = minWarning + 0.001;
+    virtualMinWarning = minError + 0.001;
+    console.log("Change!");
+  }
+  recalc(); // first run
   
 </script>
 <style>
@@ -53,7 +63,7 @@ dc3545 - ERROR
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>
-    <td><input bind:value={virtualMaxWarning}  class="lock"/><br><input bind:value={maxWarning} /></td>
+    <td><input bind:value={virtualMaxWarning} class="lock"/><br><input  on:change={recalc}  bind:value={maxWarning} /></td>
   </tr>
   <tr style="background-color:#007bff">
     <td>OK</td>
