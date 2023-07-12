@@ -76,14 +76,14 @@ sprawdzać typowanie? - jak ominąć stringi?
   </tr>
   <tr style="background-color:#ffc107">
     <td>WARNING</td>
-    <td><input bind:value={virtualMaxWarning} class="lock"/><br><input  on:change={recalc} on:keypress={recalc} on:change={recalc} bind:value={maxWarning} /></td>
+    <td><input bind:value={virtualMaxWarning} class="lock" readonly/><br><input  on:change={recalc} on:keypress={recalc} on:change={recalc} bind:value={maxWarning} /></td>
   </tr>
   <tr style="background-color:#007bff">
     <td>OK</td>
     <td>
-      <input bind:value={virtualMaxOk} class="lock"  />
+      <input bind:value={virtualMaxOk} class="lock" readonly  />
       <br>
-      <input bind:value={virtualMinOk} class="lock"  />
+      <input bind:value={virtualMinOk} class="lock" readonly  />
     </td>
   </tr>
   <tr style="background-color:#ffc107">
@@ -97,7 +97,7 @@ sprawdzać typowanie? - jak ominąć stringi?
   </tr>
 </table>
 COMMAND: <br>
-<input bind:value={command} class="lock"  />
+<input bind:value={command} class="lock" readonly />
 <p>
   Skopiuj powyższa linijkę z pola tekstowego i wklej w pole "Zakresy ostrzeżeń" w platformie.
 </p>
