@@ -19,7 +19,7 @@
     virtualMinWarning = minError + 0.001;
     command = "<" + minError + ">" + maxError + ":" + "<" + minWarning + ">" + maxWarning;
 
-    console.log("Change!");
+    // console.log("Change!");
   }
   recalc(); // first run
   
@@ -49,6 +49,16 @@ dc3545 - ERROR
 }
 -->
 
+<!-- 
+  TODO:
+Wersja wielojęzykowa
+Ukrycie warnga (opcjonalnie)
+dodanie nazwy zmiennej na którą algorytm ma reagować (np @temperature)
+-->
+<h3>Kreator zakresów ostrzeżeń</h3>
+<p>
+  Kreator ma za zadanie ułatwić stworzenie odpowiedniego stringa którego celem jest zmiana koloru komunikatu w zależności od wartości. Wystarczy w edytowalen pola wpisać zakresy, a na dole zostanie wygenerowany gotowy zakres ostrzeżeń, który należy wkleić w pole "Zakresy ostrzeżeń"
+</p>
 <p>
   Zakresy ostrzeżeń w formacie alertCondition[:warningConditon] (np. <b>{info}</b> )
 </p>
@@ -81,3 +91,6 @@ dc3545 - ERROR
 </table>
 COMMAND: <br>
 <input bind:value={command} class="lock"  />
+<p>
+  Skopiuj powyższa linijkę z pola tekstowego i wklej w pole "Zakresy ostrzeżeń" w platformie.
+</p>
