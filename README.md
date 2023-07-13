@@ -5,4 +5,7 @@
 `npm run dev` (Vite)
 `npm vite`
 
+
+`npm run build`
+
 Svelte, Typescript
